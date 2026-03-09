@@ -1,0 +1,94 @@
+.qaPage {
+  padding: 0;
+}
+
+.pageHeader {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.headerTitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.headerIcon {
+  color: var(--accent-secondary);
+}
+
+.pageTitle {
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.pageDescription {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 32px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.qaContainer {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+  margin-bottom: 32px;
+}
+
+.suggestionsTitle {
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.suggestionChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  background: #1a1a26;
+  border-color: var(--text-muted);
+}
+
+.dynamicChip {
+  color: var(--accent-primary);
+  border-color: rgba(76, 201, 240, 0.3);
+  background: rgba(76, 201, 240, 0.05);
+}
+
+.dynamicChip:hover {
+  background: rgba(76, 201, 240, 0.15);
+  border-color: rgba(76, 201, 240, 0.5);
+}

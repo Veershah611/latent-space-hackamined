@@ -1,0 +1,20 @@
+# --- Node.js Project Dependencies ---
+# Note: The frontend is a Node.js project. Dependencies are natively managed by package.json and installed via npm or yarn.
+# This requirements.txt file is provided for reference or deployment scripts requiring this format.
+
+# Core Dependencies
+react==^18.2.0
+react-dom==^18.2.0
+recharts==^2.10.3
+papaparse==^5.5.3
+react-markdown==^10.1.0
+
+# Animations & Icons
+framer-motion==^12.35.0
+lucide-react==^0.577.0
+
+# Development Dependencies
+@types/react==^18.2.15
+@types/react-dom==^18.2.7
+@vitejs/plugin-react==^4.0.3
+vite==^4.4.5

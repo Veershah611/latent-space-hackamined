@@ -1,0 +1,23 @@
+# --- Backend & API ---
+fastapi
+uvicorn
+pydantic
+python-multipart
+python-dotenv
+
+# --- Machine Learning & Data ---
+pandas
+numpy
+scikit-learn
+xgboost==3.2.0
+shap==0.51.0
+polars
+requests
+
+# --- GenAI & LLM ---
+openai
+langchain
+google-generativeai
+
+# --- Testing ---
+pytest

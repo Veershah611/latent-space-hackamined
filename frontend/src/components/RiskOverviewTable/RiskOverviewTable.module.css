@@ -1,0 +1,107 @@
+.container {
+  background: transparent;
+  width: 100%;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin: 0 0 16px 0;
+  font-weight: 600;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.row {
+  transition: background-color 0.15s ease;
+}
+
+.row:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.highRiskRow:hover {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.statusCell {
+  width: 48px;
+  text-align: center;
+}
+
+.dangerIcon {
+  color: var(--status-high);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.idCell {
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-primary);
+}
+
+.scoreCell {
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreValue {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.empty {
+  text-align: center;
+  padding: 48px;
+  color: var(--text-muted);
+}
+
+.container.compact .table td,
+.container.compact .table th {
+  padding: 8px 12px;
+}
