@@ -1,7 +1,9 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { api } from '../../services/api';
 import { Beaker, UploadCloud, FileSpreadsheet } from 'lucide-react';
 import styles from './SandboxPage.module.css';
+
+const DEMO_CSV_PATH = '/REAL_hackathon_demo_data.csv';
 
 export function SandboxPage({ onResultsUpdate }) {
   const [file, setFile] = useState(null);
@@ -9,6 +11,24 @@ export function SandboxPage({ onResultsUpdate }) {
   const [results, setResults] = useState(null);
   const [error, setError] = useState(null);
   const fileInputRef = useRef(null);
+
+  // Auto-load demo CSV on mount
+  useEffect(() => {
+    async function loadDemoCSV() {
+      try {
+        const response = await fetch(DEMO_CSV_PATH);
+        if (!response.ok) return;
+        const blob = await response.blob();
+        const demoFile = new File([blob], 'REAL_hackathon_demo_data.csv', {
+          type: 'text/csv',
+        });
+        setFile(demoFile);
+      } catch {
+        // Silently ignore – user can still upload manually
+      }
+    }
+    loadDemoCSV();
+  }, []);
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
